@@ -1,0 +1,9 @@
+name: mangos
+channels:
+  - defaults
+dependencies:
+  - python=3.7
+pip:
+  - rasa==1.10.0
+prefix: /Users/saurav/yes/envs/mangos
+
