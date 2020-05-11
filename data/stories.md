@@ -1,29 +1,11 @@
-## happy path
-* greet
-  - utter_greet
-  - action_hello_world
-* mood_great
-  - utter_happy
-
-## sad path 1
-* greet
-  - utter_greet
-  - action_hello_world
-* mood_unhappy
-  - utter_cheer_up
-  - utter_did_that_help
-* affirm
-  - utter_happy
-
-## sad path 2
-* greet
-  - utter_greet
-  - action_hello_world
-* mood_unhappy
-  - utter_cheer_up
-  - utter_did_that_help
-* deny
-  - utter_goodbye
+## ask mangos
+* mango_variety
+  - action_get_types
+  - utter_mango_variety
+* mango_organic
+  - utter_organic
+* mango_price
+  - utter_mango_price
 
 ## say goodbye
 * goodbye

@@ -6,22 +6,26 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - mango_variety
+  - mango_organic
+  - mango_price
+entity:
+  - mango_variety
+slots:
+  mango_variety:
+    type: unfeaturized
 actions:
-  - action_hello_world
+  - action_get_types
+  - action_get_price
 responses:
   utter_greet:
   - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
+  utter_organic:
+  - text: "All our mangoes are Organic"
+  utter_mango_variety:
+  - text: "Today, we have the following varietyes of Mango - {mango_variety}"
+  utter_mango_price:
+  - text: "Price is 100"
   utter_goodbye:
   - text: "Bye"
 

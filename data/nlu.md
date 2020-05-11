@@ -27,30 +27,22 @@
 - no way
 - not really
 
-## intent:mood_great
-- perfect
-- very good
-- great
-- amazing
-- wonderful
-- I am feeling very good
-- I am great
-- I'm good
-
-## intent:mood_unhappy
-- sad
-- very sad
-- unhappy
-- bad
-- very bad
-- awful
-- terrible
-- not very good
-- extremely sad
-- so sad
-
 ## intent:bot_challenge
 - are you a bot?
 - are you a human?
 - am I talking to a bot?
 - am I talking to a human?
+
+## intent:mango_variety
+- what types of mangoes do you have?
+- What kinds of mangoes are available?
+- what mangoes do you have?
+
+## intent:mango_organic
+- Are the mangos organic?
+- Are these organic?
+- Organic?
+
+## intent:mango_price
+- What is the price of [Alphonso](mango_type)
+- how much for [Dasheri](mango_type)

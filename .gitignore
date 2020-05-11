@@ -1,3 +1,4 @@
 __pycache__
 models/
 story_graph.dot
+results/story_confmat.pdf

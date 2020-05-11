@@ -11,17 +11,31 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+import rasa_sdk.events as ev
+import pandas as pd
 
 
-class ActionHelloWorld(Action):
+class ActionGetTypes(Action):
 
     def name(self) -> Text:
-        return "action_hello_world"
+        return "action_get_types"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        stock = pd.read_csv('actions/mangos.tsv', delimiter=',')
+        available_varieties = stock['variety'].to_list()
+        return [ev.SlotSet("mango_variety", ", ".join(available_varieties))]
 
-        dispatcher.utter_message(text="Hello World!")
+class ActionGetPrice(Action):
+
+    def name(self) -> Text:
+        return "action_get_price"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        rupee_symbol = u"\u20B9"
+        dispatcher.utter_message(text=f'{rupee_symbol} 30')
 
         return []
