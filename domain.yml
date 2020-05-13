@@ -1,52 +1,59 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - get_mango_variety
-  - get_mango_organic
-  - get_mango_price
-  - buy_mangos
-  - inform_address
-entity:
-  - mango_variety
-  - mango_type
+- greet
+- goodbye
+- affirm
+- deny
+- bot_challenge
+- get_mango_variety
+- get_mango_organic
+- get_mango_price
+- buy_mangos
+- inform_address
+entities:
+- mango_type
+- address
+- qty
 slots:
-  mango_variety:
+  address:
     type: unfeaturized
   mango_price:
     type: unfeaturized
   mango_type:
     type: unfeaturized
+  mango_variety:
+    type: unfeaturized
   qyt:
     type: unfeaturized
-  address:
-    type: unfeaturized
-actions:
-  - action_get_types
-  - action_get_price
 responses:
   utter_greet:
-  - text: "Hey! How are you? Welcome to Mango World."
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Mangoes_pic.jpg/1280px-Mangoes_pic.jpg"
+  - text: Hey! How are you? Welcome to Mango World.
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Mangoes_pic.jpg/1280px-Mangoes_pic.jpg
   utter_organic:
-  - text: "All our mangoes are Organic"
+  - text: All our mangoes are Organic
   utter_mango_variety:
-  - text: "Today, we have the following varietyes of Mango - {mango_variety}"
+  - text: Today, we have the following varietyes of Mango - {mango_variety}
   utter_mango_price:
-  - text: "Price for {mango_type} is {mango_price}"
+  - text: Price for {mango_type} is {mango_price}
   utter_goodbye:
-  - text: "Have a great day."
+  - text: Have a great day.
   utter_get_address:
-  - text: "Absolutely! {mango_type} is the best. You want {qyt} kgs of [mango_type]? Which address do I send these to?"
+  - text: Absolutely! {mango_type} is the best. You want {qyt} kgs of [mango_type]?
+      Which address do I send these to?
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: I am a bot, powered by Rasa.
   utter_thanks_for_the_order:
-  - text: "Thanks for the order. Your Mangos are on the way."
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  - text: Thanks for the order. Your Mangos are on the way.
+actions:
+- action_get_types
+- action_get_price
+- utter_greet
+- utter_organic
+- utter_mango_variety
+- utter_mango_price
+- utter_goodbye
+- utter_get_address
+- utter_iamabot
+- utter_thanks_for_the_order
