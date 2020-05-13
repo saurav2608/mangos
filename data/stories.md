@@ -1,11 +1,22 @@
+## greet 
+
+* greet
+  - utter_greet
+
 ## ask mangos
-* mango_variety
+* get_mango_variety
   - action_get_types
   - utter_mango_variety
-* mango_organic
+* get_mango_organic
   - utter_organic
-* mango_price
+* get_mango_price
+  - action_get_price
   - utter_mango_price
+* buy_mangos
+  - utter_get_address
+* inform_address
+  - utter_thanks_for_the_order
+  - utter_goodbye
 
 ## say goodbye
 * goodbye

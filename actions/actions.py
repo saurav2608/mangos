@@ -27,6 +27,7 @@ class ActionGetTypes(Action):
         available_varieties = stock['variety'].to_list()
         return [ev.SlotSet("mango_variety", ", ".join(available_varieties))]
 
+
 class ActionGetPrice(Action):
 
     def name(self) -> Text:
@@ -36,6 +37,8 @@ class ActionGetPrice(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         rupee_symbol = u"\u20B9"
-        dispatcher.utter_message(text=f'{rupee_symbol} 30')
+        mango_type = tracker.get_slot('mango_type')
+        stock = pd.read_csv('actions/mangos.tsv', delimiter=',')
+        price = stock[stock['variety'] == mango_type]['price'].values[0]
 
-        return []
+        return [ev.SlotSet('mango_price', f'{rupee_symbol}{price}')]
