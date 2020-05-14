@@ -25,7 +25,7 @@ slots:
     type: unfeaturized
   mango_variety:
     type: unfeaturized
-  qyt:
+  qty:
     type: unfeaturized
 responses:
   utter_greet:
@@ -40,7 +40,7 @@ responses:
   utter_goodbye:
   - text: Have a great day.
   utter_get_address:
-  - text: Absolutely! {mango_type} is the best. You want {qyt} kgs of [mango_type]?
+  - text: Absolutely! {mango_type} is the best. You want {qyt} kgs of {mango_type}?
       Which address do I send these to?
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
