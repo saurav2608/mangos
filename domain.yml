@@ -46,6 +46,8 @@ responses:
   - text: I am a bot, powered by Rasa.
   utter_thanks_for_the_order:
   - text: Thanks for the order. Your Mangos are on the way.
+  utter_payment_link:
+  - text: Here is the payment link. "https://pay.me"
 actions:
 - action_get_types
 - action_get_price

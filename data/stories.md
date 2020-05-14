@@ -16,6 +16,7 @@
   - utter_get_address
 * inform_address
   - utter_thanks_for_the_order
+  - utter_payment_link
   - utter_goodbye
 
 ## say goodbye
